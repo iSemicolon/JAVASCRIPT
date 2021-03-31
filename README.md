@@ -27,6 +27,8 @@
     <p id="demo12"></p>
     <p id="demo13"></p>
     <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
     <!--Print On Browser Window-->
 
     <!--
@@ -225,7 +227,7 @@ var arr={a:10, b:20, c:30, d:40};
 
  /*arr.e=50;
 
-document.getElementById("demo12").innerHTML=arr.e;*/
+document.getElementById("demo12").innerHTML=arr.e;
 
 //delete elements
 
@@ -238,6 +240,52 @@ var db=Object.values(arrb);
 
 document.getElementById("demo14").innerHTML=db;
 
+
+
+//JAVASCRIPT GET-SET METHOD
+
+var arrb={a:10,
+     b:20,
+      c:30,
+       d:40,
+  get func()
+{
+    return this.b;
+}
+};
+
+document.getElementById("demo15").innerHTML=arrb.func;
+
+
+var arr={a:10,
+     b:20,
+      c:30,
+       d:40,
+       e:"",
+  set func(lang)
+{
+    this.e=lang;
+}
+};
+
+arr.func="english";
+
+document.getElementById("demo16").innerHTML=arr.e;*/
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "",
+  set lang(lang) {
+    this.language = lang.toUpperCase();
+  }
+};
+
+// Set an object property using a setter:
+person.lang = "en";
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.language;
     </script>
     
 </body>
