@@ -29,6 +29,8 @@
     <p id="demo14"></p>
     <p id="demo15"></p>
     <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
     <!--Print On Browser Window-->
 
     <!--
@@ -223,7 +225,7 @@ var arr={
 
 //Adding New Properties
 */
-var arr={a:10, b:20, c:30, d:40};
+//var arr={a:10, b:20, c:30, d:40};
 
  /*arr.e=50;
 
@@ -270,7 +272,7 @@ var arr={a:10,
 
 arr.func="english";
 
-document.getElementById("demo16").innerHTML=arr.e;*/
+document.getElementById("demo16").innerHTML=arr.e;
 
 var person = {
   firstName: "John",
@@ -286,6 +288,60 @@ person.lang = "en";
 
 // Display data from the object:
 document.getElementById("demo").innerHTML = person.language;
+
+
+
+//function add in constructor
+
+function consta(a,b,c,d)
+{
+    this.a1=a;
+    this.b1=b;
+    this.c1=c;
+    this.d1=d;
+}
+consta.e=50;
+
+var num=new consta(90,80,60,50);
+document.getElementById("demo16").innerHTML=num.e;
+
+//dirctly we can't add in constructor for this we have to write inside constuctor
+
+// no1.solutions
+
+function constac(a,b,c,d)
+{
+    this.a1=a;
+    this.b1=b;
+    this.c1=c;
+    this.d1=d;
+    this.e1=45;
+}
+
+var num1=new constac(1,2,3,4);
+document.getElementById("demo17").innerHTML=num1.e1;
+
+//BEST SOLUTIONS TO ADDING DATA IN CONSTRUCTORS USING PROTOTYPE
+
+function constacto(a,b,c,d){
+    this.a1=a;
+    this.b1=b;
+    this.c1=c;
+    this.d1=d;
+}
+
+constacto.prototype.e1=100;
+
+var v=new constacto(10,20,30,40);
+
+document.getElementById("demo18").innerHTML=v.e1;
+
+*/
+
+
+
+
+
     </script>
     
 </body>
