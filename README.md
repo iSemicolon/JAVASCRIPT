@@ -342,7 +342,157 @@ document.getElementById("demo18").innerHTML=v.e1;
 
 
 
+
+
+
     </script>
+    
+    //////////////////////////////////////////////////////////////////////////////
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function takevalue()
+        {
+            var fname=document.getElementById("fullname").value;
+            var dateOfBirth=document.getElementById("dob").value;
+            var UserId=document.getElementById("uId").value;
+
+        var gender1=document.getElementById("r1").value;
+        var gender2=document.getElementById("r2").value;
+        var gender3=document.getElementById("r3").value;
+
+         var rd1=document.getElementById('r1').checked;
+         var rd2=document.getElementById('r2').checked;
+         var rd3=document.getElementById('r3').checked;
+       
+
+        var loc1=document.getElementById("l1").value;
+        var loc2=document.getElementById("l2").value;
+        var loc3=document.getElementById("l3").value;
+        var loc4=document.getElementById("l4").value;
+
+         var chk1=document.getElementById('l1').checked;
+         var chk2=document.getElementById('l2').checked;
+         var chk3=document.getElementById('l3').checked;
+         var chk4=document.getElementById('l4').checked;
+       
+
+
+
+            document.write("YOUR INFO : <BR>"+"FIRST NAME : "+fname+"<br>");
+            document.write("date-Of-Birth : "+dateOfBirth+"<br>");
+            document.write("user : "+UserId+"<br>");              
+
+
+              //GENDER FIND
+            if(rd1==true)
+          {
+            
+          document.write("Gender : "+gender1+"<br>");
+         }
+
+          else if(rd2==true)
+          {
+            
+          
+          document.write("Gender : "+gender2+"<br>");
+          }
+
+        else{
+         
+        
+          document.write("Gender : "+gender3+"<br>");
+          }
+       
+
+       //LOCATION FIND
+          if(chk1==true)
+          {
+            
+          document.write("Location : "+loc1+"<br>");
+         }
+
+          else if(chk2==true)
+          {
+            
+          
+          document.write("Location : "+loc2+"<br>");
+          }
+
+        else if(chk3==true)
+         {
+        
+          document.write("Location : "+loc3+"<br>");
+          }
+
+          else 
+         {
+        
+          document.write("Location : "+loc4+"<br>");
+          }
+
+
+        }
+
+
+        
+
+
+        </script>
+
+
+</head>
+<body>
+    
+        <form >
+            
+                    <input type="text" style="text-transform: uppercase" id="fullname" placeholder="full name">
+                
+                    <input type="date" id="dob" placeholder="Date of Birth">
+                
+                    <input type="text" id="uId" placeholder="username">
+                
+                        <input type="password" placeholder="password">
+                   
+                        <input type="text" placeholder="confirm password">
+                   
+                  
+                      
+                        <input type="radio" id="r1" name="gender4"  value="male" >Male
+                        <input type="radio" id="r2" name="gender4"  value="female">Female
+                        <input type="radio" id="r3" name="gender4" value="other">Other
+                        
+
+                                <input type="checkbox" id="l1" name="kol" value="KOLKATA">KOLKATA
+                                <input type="checkbox" id="l2" name="jp" value="JAIPUR">JAIPUR
+                                <input type="checkbox" id="l3" name="del" value="DELHI">DELHI
+                                <input type="checkbox" id="l4" name="blr" value="BANGALORE">BANGALORE
+
+<!--
+
+                                <select name="dropDown" id="dp">
+                                  <option value="Deposit">Deposit</option>
+                                  <option value="Withdraw">Withdraw</option>
+                                </select> -->
+
+
+               
+                <!-- NOW WE NEED TO ADD SUBMIT BUTTON -->
+            
+                    <input type="submit" onclick="takevalue()">
+                 
+        </form>
+    
+
+</body>
+</html>
     
 </body>
 </html>
