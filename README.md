@@ -31,6 +31,19 @@
     <p id="demo16"></p>
     <p id="demo17"></p>
     <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
     <!--Print On Browser Window-->
 
     <!--
@@ -338,161 +351,197 @@ document.getElementById("demo18").innerHTML=v.e1;
 
 */
 
+//Function Call
+
+//JavaScript Function Definitions
+
+/*
+var res=myFunc(10,20);
+
+document.getElementById("demo19").innerHTML=res;
+
+function myFunc(a,b)
+{
+    return a*b;
+}
+
+//Function Expressions
+A JavaScript function can also be defined using an expression
 
 
 
 
+var res= function(a,b){
+    return a*b;
+}
+
+document.getElementById("demo20").innerHTML=res;
 
 
+var res=function(a,b){
+    return a*b;
+}
 
-    </script>
+document.getElementById("demo21").innerHTML=res(4,3);
+
+
+//The Function() Constructor
+
+JavaScript functions are defined with the function keyword.
+
+Functions can also be defined with a built-in JavaScript function constructor called Function().
+
+var res=new Function("a","b","return a*b")
+document.getElementById("demo22").innerHTML=res(4,2);*/
+
+//JAVASCRIPT FUNCTION
+
+//Function Declaration
+
+/*
+var x=func(4,3);
+
+document.getElementById("demo23").innerHTML=x;
+
+function func (a,b) {
+    var c=a*b;
+
+    return c;
     
-    //////////////////////////////////////////////////////////////////////////////
+}
+
+
+//Function Expressions
+
+var x= function (a,b) {
+    return a*b;
     
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+}
 
-    <script>
-        function takevalue()
-        {
-            var fname=document.getElementById("fullname").value;
-            var dateOfBirth=document.getElementById("dob").value;
-            var UserId=document.getElementById("uId").value;
+document.getElementById("demo24").innerHTML=x;
 
-        var gender1=document.getElementById("r1").value;
-        var gender2=document.getElementById("r2").value;
-        var gender3=document.getElementById("r3").value;
 
-         var rd1=document.getElementById('r1').checked;
-         var rd2=document.getElementById('r2').checked;
-         var rd3=document.getElementById('r3').checked;
-       
+//Functions are Objects or length og arguments
 
-        var loc1=document.getElementById("l1").value;
-        var loc2=document.getElementById("l2").value;
-        var loc3=document.getElementById("l3").value;
-        var loc4=document.getElementById("l4").value;
+var x=func(3,4);
 
-         var chk1=document.getElementById('l1').checked;
-         var chk2=document.getElementById('l2').checked;
-         var chk3=document.getElementById('l3').checked;
-         var chk4=document.getElementById('l4').checked;
-       
+function func(a,b){
+    return arguments.length;
+}
+document.getElementById("demo25").innerHTML=x;*/
 
 
 
-            document.write("YOUR INFO : <BR>"+"FIRST NAME : "+fname+"<br>");
-            document.write("date-Of-Birth : "+dateOfBirth+"<br>");
-            document.write("user : "+UserId+"<br>");              
+//Arrow functions allows a short syntax for writing function expressions.
+
+/*You don't need the function keyword, the return keyword, and the curly brackets.
+Arrow functions do not have their own this. They are not well suited for defining object methods.
+
+Arrow functions are not hoisted. They must be defined before they are used.
+
+Using const is safer than using var, because a function expression is always constant value.
+
+You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:
+*/
+
+/*
+var x=(a,b)=>{return a*b};
+
+document.getElementById("demo26").innerHTML=x(8,5);
 
 
-              //GENDER FIND
-            if(rd1==true)
-          {
-            
-          document.write("Gender : "+gender1+"<br>");
-         }
 
-          else if(rd2==true)
-          {
-            
-          
-          document.write("Gender : "+gender2+"<br>");
-          }
+//Function declaration types
 
-        else{
-         
-        
-          document.write("Gender : "+gender3+"<br>");
-          }
-       
+var x=(a,b=2)=>{
+    return a*b;
+}
 
-       //LOCATION FIND
-          if(chk1==true)
-          {
-            
-          document.write("Location : "+loc1+"<br>");
-         }
+document.getElementById("demo27").innerHTML=x(5); 
 
-          else if(chk2==true)
-          {
-            
-          
-          document.write("Location : "+loc2+"<br>");
-          }
+//Array and Functions
 
-        else if(chk3==true)
-         {
-        
-          document.write("Location : "+loc3+"<br>");
-          }
+var x=func(10,40,30,20,50);
+function func()
+{
+    
 
-          else 
-         {
-        
-          document.write("Location : "+loc4+"<br>");
-          }
+    for(var i=0; i<arguments.length;i++)
+    {
+        var z=arguments[i];
 
+        if(z<=arguments[i]){
+            z=arguments[i];
 
         }
+    }
+
+    return z;
+}
+
+document.getElementById("demo28").innerHTML=x; 
+
+//Sum of Array ELEMENTS
 
 
-        
+var x=func(25,45,85,98,47);
+
+function func(){
+    var sum=0;
+
+    for(var z=0; z<arguments.length;z++){
+
+        sum=sum+arguments[z];
+    }
+
+    return sum;
+
+}
+
+document.getElementById("demo29").innerHTML=x; 
+
+//The JavaScript call() Method
 
 
-        </script>
+var person={
+    fullName: function(){
+        return this.firstName+" "+this.lastName;
+    }
+}
+
+var person1={
+    firstName:"PALASH" ,
+    lastName: "SAMANTA"
+}
+
+var person2={
+    firstName:"KALYAN",
+    lastName: "JANA"
+}
+
+var x=person.fullName.call(person1);
+document.getElementById("demo30").innerHTML=x; */
 
 
-</head>
-<body>
-    
-        <form >
-            
-                    <input type="text" style="text-transform: uppercase" id="fullname" placeholder="full name">
-                
-                    <input type="date" id="dob" placeholder="Date of Birth">
-                
-                    <input type="text" id="uId" placeholder="username">
-                
-                        <input type="password" placeholder="password">
-                   
-                        <input type="text" placeholder="confirm password">
-                   
-                  
-                      
-                        <input type="radio" id="r1" name="gender4"  value="male" >Male
-                        <input type="radio" id="r2" name="gender4"  value="female">Female
-                        <input type="radio" id="r3" name="gender4" value="other">Other
-                        
-
-                                <input type="checkbox" id="l1" name="kol" value="KOLKATA">KOLKATA
-                                <input type="checkbox" id="l2" name="jp" value="JAIPUR">JAIPUR
-                                <input type="checkbox" id="l3" name="del" value="DELHI">DELHI
-                                <input type="checkbox" id="l4" name="blr" value="BANGALORE">BANGALORE
-
-<!--
-
-                                <select name="dropDown" id="dp">
-                                  <option value="Deposit">Deposit</option>
-                                  <option value="Withdraw">Withdraw</option>
-                                </select> -->
+//With the apply() method, you can write a method that can be used on different objects.
 
 
-               
-                <!-- NOW WE NEED TO ADD SUBMIT BUTTON -->
-            
-                    <input type="submit" onclick="takevalue()">
-                 
-        </form>
-    
+var person={
+    fullName: function(){
+        return this.firstName +" " +this.lastName;
+    }
+}
 
-</body>
-</html>
+var person1={
+    firstName:"PALASH",
+    lastName:"SAMANTA"
+
+}
+var x=person.fullName.apply(person1);
+document.getElementById("demo31").innerHTML=x;
+    </script>
+
+
     
 </body>
 </html>
