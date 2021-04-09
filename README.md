@@ -532,6 +532,32 @@ var person={
     }
 }
 
+//JavaScript Callbacks()
+
+/*A callback is a function passed as an argument to another function
+
+This technique allows a function to call another function
+
+A callback function can run after another function has finished
+*/
+
+
+function display(data){
+    document.getElementById("demo32").innerHTML=data;
+}
+
+function myFirst(){
+    display("GOOD MORNING");
+}
+
+function mySecond(){
+    display("GOOD NIGHT");
+}
+mySecond();
+myFirst();
+
+
+
 var person1={
     firstName:"PALASH",
     lastName:"SAMANTA"
